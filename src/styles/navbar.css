@@ -164,13 +164,17 @@
 
 @media (max-width: 992px) {
   .nav-logo {
-    left: 5px;
-    /* Moved further left as requested */
+    left: 20px;
   }
 
   .navbar-brand-logo {
-    height: 70px;
-    /* Reduced size so it fits more inside the navbar */
+    height: 120px;
+    /* Adjusted size to prevent the top part from cutting off out of the screen */
+  }
+
+  .navbar.scrolled .navbar-brand-logo {
+    height: 60px;
+
   }
 
   .mobile-menu-btn {
