@@ -1,0 +1,71 @@
+.timings-section {
+  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1542617719-7561a3328eeb?auto=format&fit=crop&q=80') center/cover fixed;
+  padding: 100px 0;
+}
+
+.timings-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.timing-card {
+  background-color: var(--bg-card);
+  padding: 40px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: var(--shadow-lg);
+  border-top: 5px solid var(--saffron);
+  position: relative;
+  overflow: hidden;
+}
+
+.timing-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjZmZmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMODggWk04IDBMMCA4IFoiIHN0cm9rZT0iI2Y1ZjVmNSIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+Cjwvc3ZnPg==');
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.timing-icon {
+  font-size: 3rem;
+  color: var(--golden);
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.timing-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.timing-list {
+  text-align: left;
+}
+
+.timing-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px dashed var(--gray-300);
+}
+
+.timing-item:last-child {
+  border-bottom: none;
+}
+
+.timing-name {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.timing-time {
+  color: var(--maroon);
+  font-weight: 700;
+}

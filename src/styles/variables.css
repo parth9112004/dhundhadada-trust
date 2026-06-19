@@ -1,0 +1,80 @@
+:root {
+  /* Color Theme */
+  --saffron: #FF9933;
+  --saffron-light: #ffb366;
+  --saffron-dark: #cc7a29;
+  --golden: #D4AF37;
+  --golden-light: #e6c865;
+  --golden-dark: #a6892b;
+  --white: #FFFFFF;
+  --maroon: #800000;
+  --maroon-light: #b30000;
+  --maroon-dark: #4d0000;
+  
+  /* Neutral Colors */
+  --black: #111111;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-600: #6c757d;
+  --gray-800: #343a40;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+  --shadow-xl: 0 20px 25px rgba(0,0,0,0.15);
+  
+  /* Typography */
+  --font-primary: 'Mukta', 'Hind Vadodara', sans-serif;
+  --font-secondary: 'Rasa', serif;
+  
+  /* Layout */
+  --max-width: 1200px;
+  --nav-height: 80px;
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+
+  /* Theme Dynamic Defaults (Light Mode) */
+  --bg-body: var(--gray-100);
+  --bg-card: var(--white);
+  --bg-section: var(--white);
+  --bg-nav: var(--white);
+  --text-primary: var(--black);
+  --text-secondary: var(--gray-600);
+  --border-color: var(--gray-200);
+  --primary-color: var(--maroon);
+  --secondary-color: var(--saffron);
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.5);
+}
+
+/* ---------------------------------
+   DARK MODE - Liquid Glass Theme
+-----------------------------------*/
+[data-theme="dark"] {
+  --bg-body: #0d0d12;
+  --bg-card: rgba(20, 20, 25, 0.6);
+  --bg-section: #121218;
+  
+  /* Liquid Glass Navbar & Cards */
+  --bg-nav: rgba(13, 13, 18, 0.7);
+  --glass-bg: rgba(25, 25, 30, 0.5);
+  --glass-border: rgba(255, 255, 255, 0.08);
+
+  --text-primary: #f0f0f5;
+  --text-secondary: #a0a0b0;
+  --border-color: rgba(255, 255, 255, 0.1);
+  
+  /* Subdued but premium brand colors for dark mode */
+  --primary-color: #5c0000;
+  --secondary-color: #e68a00;
+  
+  --shadow-sm: 0 4px 10px rgba(0,0,0,0.3);
+  --shadow-md: 0 8px 20px rgba(0,0,0,0.4);
+  --shadow-lg: 0 15px 35px rgba(0,0,0,0.5);
+}
+

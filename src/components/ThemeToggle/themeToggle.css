@@ -1,0 +1,95 @@
+.glass-toggle-container {
+  position: fixed;
+  bottom: 30px;
+  right: 90px; /* Placed next to the scroll-to-top button */
+  z-index: 999;
+  display: inline-block;
+}
+
+.glass-toggle-track {
+  width: 104px;
+  height: 52px;
+  /* Deep translucent tint so the glass pops on both light/dark backgrounds */
+  background: rgba(15, 25, 40, 0.35);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 8px 32px 0 rgba(0, 0, 0, 0.2),
+    inset 0 0 10px rgba(255, 255, 255, 0.05);
+  border-radius: 40px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  cursor: pointer;
+}
+
+.glass-toggle-thumb {
+  position: absolute;
+  top: 4px;
+  left: 4px; /* Moon side */
+  width: 44px;
+  height: 42px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  /* The liquid 3D bevel effect */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 
+    inset 2px 2px 5px rgba(255, 255, 255, 0.6), 
+    inset -2px -2px 6px rgba(0, 0, 0, 0.1),
+    0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  z-index: 1;
+}
+
+.glass-toggle-icon {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  color: rgba(255, 255, 255, 0.9);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Light Mode: Sun is active, Moon is inactive */
+.glass-toggle-container.light .glass-toggle-thumb {
+  /* Move to the right side (Sun) */
+  /* 104px (track) - 8px (padding) - 44px (thumb) = 52px */
+  transform: translateX(50px);
+}
+
+.glass-toggle-container.light .glass-toggle-icon:first-of-type {
+  opacity: 0.5; /* Moon inactive */
+  transform: scale(0.9);
+}
+
+.glass-toggle-container.light .glass-toggle-icon:last-of-type {
+  opacity: 1; /* Sun active */
+  transform: scale(1.1);
+}
+
+/* Dark Mode: Moon is active, Sun is inactive */
+.glass-toggle-container.dark .glass-toggle-thumb {
+  transform: translateX(0px); /* Stays on the left side (Moon) */
+}
+
+.glass-toggle-container.dark .glass-toggle-icon:first-of-type {
+  opacity: 1; /* Moon active */
+  transform: scale(1.1);
+}
+
+.glass-toggle-container.dark .glass-toggle-icon:last-of-type {
+  opacity: 0.5; /* Sun inactive */
+  transform: scale(0.9);
+}
+
+@media (max-width: 768px) {
+  .glass-toggle-container {
+    right: 85px;
+  }
+}
