@@ -164,13 +164,13 @@
 
 @media (max-width: 992px) {
   .nav-logo {
-    left: 15px;
-    /* Ensure logo is strictly on the left on mobile */
+    left: 5px;
+    /* Moved further left as requested */
   }
 
   .navbar-brand-logo {
-    height: 110px;
-    /* Reduce size slightly on mobile so it doesn't take over the screen */
+    height: 70px;
+    /* Reduced size so it fits more inside the navbar */
   }
 
   .mobile-menu-btn {

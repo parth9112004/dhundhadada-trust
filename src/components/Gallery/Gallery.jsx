@@ -14,16 +14,16 @@ const Gallery = () => {
   ];
 
   const images = [
-    { id: 1, category: 'temple', src: 'https://images.unsplash.com/photo-1599813589945-8f6a9e1e1d0f?auto=format&fit=crop&q=80', alt: 'મંદિરનો બહારનો નજારો' },
-    { id: 2, category: 'darshan', src: 'https://images.unsplash.com/photo-1604017011826-d3b4c23f8914?auto=format&fit=crop&q=80', alt: 'ભગવાનના દિવ્ય દર્શન' },
-    { id: 3, category: 'festival', src: 'https://images.unsplash.com/photo-1514222134-b57cbb8ce073?auto=format&fit=crop&q=80', alt: 'નવરાત્રી મહોત્સવ' },
-    { id: 4, category: 'temple', src: 'https://images.unsplash.com/photo-1582510003544-4d00b7f74220?auto=format&fit=crop&q=80', alt: 'આરતીનો સમય' },
-    { id: 5, category: 'darshan', src: 'https://images.unsplash.com/photo-1590050752117-238cb0fb12b1?auto=format&fit=crop&q=80', alt: 'પુષ્પ શણગાર' },
-    { id: 6, category: 'festival', src: 'https://images.unsplash.com/photo-1605369680325-1e0bc8729577?auto=format&fit=crop&q=80', alt: 'દિવાળી ઉત્સવ' }
+    { id: 1, category: 'temple', src: '/demo-img/demo-img6.jpg', alt: 'મંદિરનો બહારનો નજારો' },
+    { id: 2, category: 'darshan', src: '/demo-img/demo-img2.jpeg', alt: 'ભગવાનના દિવ્ય દર્શન' },
+    { id: 3, category: 'festival', src: '/demo-img/demo-img3.jpeg', alt: 'નવરાત્રી મહોત્સવ' },
+    { id: 4, category: 'temple', src: '/demo-img/demo-img4.jpeg', alt: 'આરતીનો સમય' },
+    { id: 5, category: 'darshan', src: '/demo-img/demo-img5.jpeg', alt: 'પુષ્પ શણગાર' },
+    { id: 6, category: 'festival', src: '/demo-img/demo-img1.jpeg', alt: 'દિવાળી ઉત્સવ' }
   ];
 
-  const filteredImages = activeFilter === 'all' 
-    ? images 
+  const filteredImages = activeFilter === 'all'
+    ? images
     : images.filter(img => img.category === activeFilter);
 
   return (
@@ -31,7 +31,7 @@ const Gallery = () => {
       <div className="container">
         <h2 className="section-title">ફોટો ગેલેરી</h2>
         <p className="section-subtitle">મંદિરના કેટલાક સુંદર અને દિવ્ય દ્રશ્યોની ઝલક</p>
-        
+
         <div className="gallery-filters">
           {filters.map(filter => (
             <button
@@ -43,11 +43,11 @@ const Gallery = () => {
             </button>
           ))}
         </div>
-        
+
         <div className="gallery-grid">
           {filteredImages.map((img, index) => (
-            <div 
-              key={img.id} 
+            <div
+              key={img.id}
               className="gallery-item"
               data-aos="zoom-in"
               data-aos-delay={index * 100}

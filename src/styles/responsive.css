@@ -112,7 +112,16 @@
   }
   
   .form-group > div {
-    flex-wrap: wrap; /* Allow the select and input to stack if screen is too small */
+    flex-wrap: wrap;
+  }
+  
+  /* Gallery spacing reductions for mobile */
+  .gallery-filters {
+    margin-bottom: 25px;
+  }
+  
+  .gallery-grid {
+    gap: 15px;
   }
   
   .footer-grid {
@@ -135,13 +144,30 @@
   }
   
   .gallery-filters {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 10px; /* Space for scrollbar */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    gap: 10px;
+  }
+  
+  /* Hide scrollbar for cleaner look */
+  .gallery-filters::-webkit-scrollbar {
+    display: none;
+  }
+  .gallery-filters {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
   
   .filter-btn {
-    width: 100%;
-    text-align: center;
+    width: auto;
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 8px 20px;
+    font-size: 1rem;
   }
   
   .timing-item {
