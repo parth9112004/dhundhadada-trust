@@ -45,15 +45,18 @@ const Gallery = () => {
         </div>
         
         <div className="gallery-grid">
-          {filteredImages.map(img => (
+          {filteredImages.map((img, index) => (
             <div 
               key={img.id} 
               className="gallery-item"
+              data-aos="zoom-in"
+              data-aos-delay={index * 100}
               onClick={() => setLightboxImg(img.src)}
             >
               <img src={img.src} alt={img.alt} loading="lazy" />
               <div className="gallery-overlay">
                 <Maximize2 className="gallery-overlay-icon" />
+                <h4 className="gallery-overlay-text">{img.alt}</h4>
               </div>
             </div>
           ))}

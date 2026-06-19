@@ -1,71 +1,364 @@
-.timings-section {
-  background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url('https://images.unsplash.com/photo-1542617719-7561a3328eeb?auto=format&fit=crop&q=80') center/cover fixed;
-  padding: 100px 0;
+/* Premium Container Styles */
+.darshan-facilities-section {
+  background-color: var(--bg-section);
+  position: relative;
+  overflow: hidden;
+  padding: 80px 0;
 }
 
-.timings-grid {
+.darshan-facilities-section::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(circle, rgba(255, 153, 51, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.darshan-facilities-section::after {
+  content: '';
+  position: absolute;
+  bottom: -20%;
+  right: -10%;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(circle, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.timing-facility-row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-bottom: 60px;
+  align-items: stretch;
+}
+
+.timing-facility-row .df-section-wrapper {
+  margin-bottom: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.df-section-wrapper {
+  margin-bottom: 60px;
+}
+
+.df-section-wrapper:last-child {
+  margin-bottom: 0;
+}
+
+.df-section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--maroon);
+  font-family: var(--font-secondary);
+  margin-bottom: 30px;
+  /* Reduced from 40px */
+  position: relative;
+}
+
+/* Premium Cards */
+.df-card {
+  background: var(--bg-card);
+  border-radius: 24px;
+  padding: 40px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  position: relative;
+  z-index: 1;
+}
+
+.df-card-title {
+  font-size: 2rem;
+  color: var(--maroon);
+  font-family: var(--font-secondary);
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-bottom: 2px solid rgba(255, 153, 51, 0.2);
+  padding-bottom: 20px;
+}
+
+.df-card-title span {
+  font-size: 2.5rem;
+}
+
+/* Section 1: Timing Schedule */
+.premium-timing-card {
+  padding: 30px;
+  /* Further reduced to perfectly match height */
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.timing-schedule {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.timing-schedule li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.time-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #FF9933;
+  margin-top: 6px;
+  box-shadow: 0 0 0 0 rgba(255, 153, 51, 0.4);
+  flex-shrink: 0;
+  animation: pulse-dot 1.5s infinite;
+}
+
+@keyframes pulse-dot {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 153, 51, 0.6);
+  }
+
+  70% {
+    box-shadow: 0 0 0 6px rgba(255, 153, 51, 0);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 153, 51, 0);
+  }
+}
+
+.time-content {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.time-content h4 {
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  margin-bottom: 0;
+  font-weight: 600;
+}
+
+.time-content p {
+  color: #FF9933;
+  font-weight: 700;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Highlighted Info Card */
+.highlighted-info-card {
+  background: linear-gradient(135deg, #FFF8E1, #FFF3E0);
+  border-radius: 16px;
+  padding: 15px 20px;
+  /* Reduced to fit better */
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-left: 6px solid #FF9933;
+  box-shadow: 0 10px 30px rgba(255, 153, 51, 0.1);
+  margin-top: auto;
+}
+
+.highlighted-info-card .info-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.highlighted-info-card .info-text h4 {
+  font-size: 1.3rem;
+  color: #D4AF37;
+  margin-bottom: 5px;
+  font-family: var(--font-secondary);
+}
+
+.highlighted-info-card .info-text p {
+  color: #333;
+  font-size: 1.1rem;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Section 2: Facility Grid */
+.facility-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 30px;
 }
 
-.timing-card {
-  background-color: var(--bg-card);
-  padding: 40px;
-  border-radius: 8px;
+.facility-card {
+  background: var(--bg-card);
+  border-radius: 20px;
+  padding: 35px 25px;
   text-align: center;
-  box-shadow: var(--shadow-lg);
-  border-top: 5px solid var(--saffron);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(212, 175, 55, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   position: relative;
   overflow: hidden;
 }
 
-.timing-card::before {
+.facility-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.08);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.facility-card::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI4IiBoZWlnaHQ9IjgiPgo8cmVjdCB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSIjZmZmIj48L3JlY3Q+CjxwYXRoIGQ9Ik0wIDBMODggWk04IDBMMCA4IFoiIHN0cm9rZT0iI2Y1ZjVmNSIgc3Ryb2tlLXdpZHRoPSIxIj48L3BhdGg+Cjwvc3ZnPg==');
-  opacity: 0.5;
-  pointer-events: none;
+  height: 4px;
+  background: linear-gradient(to right, #FF9933, #D4AF37);
+  transform: scaleX(0);
+  transition: transform 0.4s ease;
+  transform-origin: left;
 }
 
-.timing-icon {
-  font-size: 3rem;
-  color: var(--golden);
+.facility-card:hover::before {
+  transform: scaleX(1);
+}
+
+.facility-icon {
+  font-size: 3.5rem;
   margin-bottom: 20px;
   display: inline-block;
+  background: #FFF8E1;
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 20px rgba(212, 175, 55, 0.1);
 }
 
-.timing-card h3 {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
+.facility-content h4 {
+  font-size: 1.3rem;
+  color: var(--maroon);
+  margin-bottom: 12px;
+  font-family: var(--font-secondary);
 }
 
-.timing-list {
-  text-align: left;
+.facility-content p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
-.timing-item {
+/* Section 3: Notice Card */
+.premium-notice-card {
+  border-color: rgba(139, 58, 32, 0.2);
+  background: linear-gradient(to bottom right, var(--bg-card), rgba(212, 175, 55, 0.02));
+}
+
+.warning-title {
+  color: #D4AF37;
+  border-bottom-color: rgba(212, 175, 55, 0.2);
+}
+
+.notice-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 0;
-  border-bottom: 1px dashed var(--gray-300);
+  flex-direction: column;
+  gap: 18px;
 }
 
-.timing-item:last-child {
-  border-bottom: none;
+.notice-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-primary);
+  background: rgba(212, 175, 55, 0.03);
+  padding: 15px 20px;
+  border-radius: 12px;
+  transition: background 0.3s ease;
 }
 
-.timing-name {
-  font-weight: 600;
+.notice-list li:hover {
+  background: rgba(212, 175, 55, 0.08);
+}
+
+.notice-bullet {
+  color: #FF9933;
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+/* Dark Mode Overrides */
+[data-theme="dark"] .highlighted-info-card {
+  background: linear-gradient(135deg, rgba(255, 153, 51, 0.1), rgba(212, 175, 55, 0.05));
+  border-left-color: #FF9933;
+}
+
+[data-theme="dark"] .highlighted-info-card .info-text p {
   color: var(--text-primary);
 }
 
-.timing-time {
-  color: var(--maroon);
-  font-weight: 700;
+[data-theme="dark"] .facility-icon {
+  background: rgba(255, 153, 51, 0.1);
+}
+
+[data-theme="dark"] .notice-list li {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+[data-theme="dark"] .notice-list li:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .timing-facility-row {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .df-card {
+    padding: 30px 20px;
+  }
+
+  .timing-schedule {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .highlighted-info-card {
+    flex-direction: row;
+    text-align: left;
+    padding: 12px 15px;
+    align-items: center;
+  }
+
+  .highlighted-info-card .info-icon {
+    font-size: 2rem;
+  }
+
+  .highlighted-info-card .info-text p {
+    font-size: 0.95rem;
+  }
+
+  .notice-list li {
+    font-size: 1rem;
+    padding: 12px 15px;
+  }
 }

@@ -14,13 +14,13 @@ const Hero = () => {
   return (
     <section id="home" className="hero">
       <div className="hero-content">
-        <span className="hero-greeting">|| શ્રી ગણેશાય નમઃ ||</span>
-        <h1 className="hero-title">જય ધુંધાદાદા - જય શામળાદાદા</h1>
-        <p className="hero-subtitle">
+        <span className="hero-greeting" data-aos="fade-down">|| શ્રી ગણેશાય નમઃ ||</span>
+        <h1 className="hero-title" data-aos="zoom-in">જય ધુંધાદાદા - જય શામળાદાદા</h1>
+        <p className="hero-subtitle" data-aos="fade-up">
           વરલ મુકામે આવેલ ઐતિહાસિક અને પવિત્ર ધુંધાદાદા તથા શામળાદાદાના મંદિરમાં આપનું હાર્દિક સ્વાગત છે. 
           અહીંની દિવ્ય શાંતિ અને આધ્યાત્મિક વાતાવરણનો અનુભવ કરો.
         </p>
-        <div className="hero-buttons">
+        <div className="hero-buttons" data-aos="fade-up">
           <button className="btn-primary" onClick={() => document.querySelector('#timings').scrollIntoView({behavior: 'smooth'})}>
             દર્શનનો સમય
           </button>

@@ -1,6 +1,7 @@
 .navbar {
   position: fixed;
-  top: 25px; /* Navbar slightly lowered as requested */
+  top: 25px;
+  /* Navbar slightly lowered as requested */
   left: 0;
   width: 100%;
   height: 80px;
@@ -13,7 +14,8 @@
 }
 
 .navbar.scrolled {
-  top: 0; /* Snap to top on scroll */
+  top: 0;
+  /* Snap to top on scroll */
   background: linear-gradient(to right, rgba(107, 36, 20, 0.98), rgba(139, 58, 32, 0.98), rgba(107, 36, 20, 0.98));
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
@@ -21,20 +23,22 @@
 
 .nav-container {
   display: flex;
-  justify-content: space-between; /* For mobile logo and hamburger */
+  justify-content: space-between;
+  /* For mobile logo and hamburger */
   align-items: center;
   height: 100%;
 }
 
 @media (min-width: 993px) {
   .nav-container {
-    justify-content: flex-start; /* Align items from left to right on desktop */
+    justify-content: flex-start;
+    /* Align items from left to right on desktop */
   }
 }
 
 .nav-logo {
   position: absolute;
-  left: 8%; /* Placed far left relative to the entire screen */
+  left: 8%;
   top: 50%;
   transform: translateY(-50%);
   display: flex;
@@ -44,16 +48,18 @@
 }
 
 .navbar-brand-logo {
-  height: 180px; /* Made significantly larger as requested */
+  height: 180px;
+  /* Made significantly larger as requested */
   width: auto;
   object-fit: contain;
   transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
-  filter: drop-shadow(0 8px 15px rgba(0,0,0,0.5));
+  filter: drop-shadow(0 8px 15px rgba(0, 0, 0, 0.5));
 }
 
 .navbar.scrolled .navbar-brand-logo {
-  height: 65px; /* Shrinks to fit inside the navbar perfectly */
-  filter: drop-shadow(0 2px 5px rgba(0,0,0,0.3));
+  height: 65px;
+  /* Shrinks to fit inside the navbar perfectly */
+  filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.3));
 }
 
 .nav-logo:hover .navbar-brand-logo {
@@ -64,7 +70,8 @@
   display: flex;
   align-items: center;
   gap: 0;
-  margin-left: 80px; /* Space between logo and tabs */
+  margin-left: 80px;
+  /* Space between logo and tabs */
 }
 
 .nav-links li {
@@ -73,7 +80,8 @@
 }
 
 .nav-links li:not(:last-child) {
-  border-right: 1px solid rgba(212, 175, 55, 0.5); /* Golden separator pipe */
+  border-right: 1px solid rgba(212, 175, 55, 0.5);
+  /* Golden separator pipe */
 }
 
 .nav-link {
@@ -84,12 +92,13 @@
   position: relative;
   transition: all 0.3s ease;
   font-family: var(--font-secondary);
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 .nav-link:hover,
 .nav-link.active {
-  color: #d4af37; /* Golden hover */
+  color: #d4af37;
+  /* Golden hover */
   transform: scale(1.05);
 }
 
@@ -97,28 +106,33 @@
   display: none;
   background: none;
   border: none;
-  color: #fff; /* Changed to white as requested */
+  color: #fff;
+  /* Changed to white as requested */
   font-size: 1.8rem;
   cursor: pointer;
-  margin-left: auto; /* Push to the right side when it's the only flex item */
+  margin-left: auto;
+  /* Push to the right side when it's the only flex item */
   padding-right: 20px;
 }
 
 .mobile-nav {
   position: fixed;
-  top: 105px; /* Navbar (80px) + top offset (25px) */
+  top: 105px;
+  /* Navbar (80px) + top offset (25px) */
   right: -100%;
   left: auto;
-  width: 60%; /* Half page */
+  width: 60%;
+  /* Half page */
   height: calc(100vh - 105px);
-  background-color: rgba(40, 10, 5, 0.7); /* Dark maroon/black with 30% transparency */
+  background-color: rgba(40, 10, 5, 0.7);
+  /* Dark maroon/black with 30% transparency */
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
   display: flex;
   flex-direction: column;
   padding: 20px;
   transition: right var(--transition-normal);
-  box-shadow: -4px 0 10px rgba(0,0,0,0.3);
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .navbar.scrolled .mobile-nav {
@@ -135,23 +149,30 @@
   padding: 15px 0;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #fff; /* White links */
-  border-bottom: 1px solid rgba(212, 175, 55, 0.3); /* Golden border */
+  color: #fff;
+  /* White links */
+  border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+  /* Golden border */
   transition: color var(--transition-fast);
 }
 
 .mobile-nav-link:hover,
 .mobile-nav-link.active {
-  color: #d4af37; /* Golden hover */
+  color: #d4af37;
+  /* Golden hover */
 }
 
 @media (max-width: 992px) {
   .nav-logo {
-    left: 15px; /* Ensure logo is strictly on the left on mobile */
+    left: 15px;
+    /* Ensure logo is strictly on the left on mobile */
   }
+
   .navbar-brand-logo {
-    height: 110px; /* Reduce size slightly on mobile so it doesn't take over the screen */
+    height: 110px;
+    /* Reduce size slightly on mobile so it doesn't take over the screen */
   }
+
   .mobile-menu-btn {
     display: block;
   }

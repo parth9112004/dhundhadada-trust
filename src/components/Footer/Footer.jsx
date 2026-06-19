@@ -51,12 +51,12 @@ const Footer = () => {
               src="/temple-logo.png"
               alt="જય ધુંધાદાદા - શામળાદાદા"
               style={{
-                height: '80px',
+                height: '120px',
                 width: 'auto',
                 objectFit: 'contain',
                 display: 'block',
-                marginBottom: '20px',
-                filter: 'drop-shadow(0 2px 5px rgba(0,0,0,0.2))'
+                marginBottom: '25px',
+                filter: 'drop-shadow(0 4px 8px rgba(0,0,0,0.4))'
               }}
             />
             <p>
@@ -92,11 +92,15 @@ const Footer = () => {
             <h4>સંપર્ક માહિતી</h4>
             <ul>
               <li>
-                <MapPin size={20} className="footer-contact-icon" />
+                <div className="footer-contact-icon">
+                  <MapPin size={18} />
+                </div>
                 <span>વરલ, તા. સિહોર, જિ. ભાવનગર, ગુજરાત - ૩૬૪૨૪૦</span>
               </li>
               <li>
-                <Phone size={20} className="footer-contact-icon" />
+                <div className="footer-contact-icon">
+                  <Phone size={18} />
+                </div>
                 <span>+91 98765 43210</span>
               </li>
             </ul>
@@ -104,7 +108,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom">
-          <p>&copy; {new Date().getFullYear()} શ્રી ધુંધાદાદા - શામળાદાદા મંદિર, વરલ. સર્વાધિકાર સુરક્ષિત.</p>
+          <p>&copy; {new Date().getFullYear()} શ્રી ધુંધાદાદા - શામળાદાદા મંદિર, વરલ. Official Temple Portal • Secure, Trusted & Maintained by Temple Trust.</p>
         </div>
       </div>
 

@@ -10,11 +10,16 @@
 
 @media (max-width: 768px) {
   .section {
-    padding: 60px 0;
+    padding: 25px 0;
   }
   
   .section-title {
     font-size: 2rem;
+  }
+
+  .section-subtitle {
+    margin-bottom: 30px;
+    font-size: 1.05rem;
   }
   
   .nav-links {
@@ -41,8 +46,73 @@
     order: -1;
   }
   
+  /* Facility specific mobile spacing reductions */
+  .df-section-title {
+    margin-bottom: 15px;
+  }
+  
+  .facility-grid {
+    gap: 15px;
+  }
+  
+  .facility-card {
+    padding: 20px 15px;
+  }
+  
+  .facility-icon {
+    font-size: 2.5rem;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    margin-bottom: 15px;
+  }
+  
   .contact-grid {
     grid-template-columns: 1fr;
+    gap: 30px;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  /* Contact section mobile spacing reductions */
+  .contact-info, .contact-form-container {
+    padding: 25px 15px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+
+  .contact-details {
+    width: calc(100% - 65px); /* Adjusted for icon gap */
+  }
+
+  .contact-details p {
+    word-break: break-all;
+    overflow-wrap: anywhere;
+    font-size: 0.9rem;
+    white-space: normal;
+  }
+
+  .contact-info h3, .contact-form-container h3 {
+    margin-bottom: 20px;
+  }
+
+  .contact-item {
+    margin-bottom: 20px;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .form-control {
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+  
+  .form-group > div {
+    flex-wrap: wrap; /* Allow the select and input to stack if screen is too small */
   }
   
   .footer-grid {

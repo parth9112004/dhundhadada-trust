@@ -1,14 +1,35 @@
 .footer {
-  background-color: var(--maroon);
+  background: linear-gradient(135deg, #3d0000 0%, var(--maroon) 100%);
   color: var(--white);
-  padding: 60px 0 20px;
+  padding: 80px 0 20px;
+  position: relative;
+  border-top: 4px solid var(--golden);
+  overflow: hidden;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCI+CiAgPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMiIgZmlsbD0iI0Q0QUYzNyIgZmlsbC1vcGFjaXR5PSIwLjEiLz4KPC9zdmc+');
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .footer-grid {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  gap: 40px;
-  margin-bottom: 40px;
+  gap: 60px;
+  margin-bottom: 50px;
+  position: relative;
+  z-index: 1;
+}
+
+.footer-about {
+  padding-right: 30px;
 }
 
 .footer-about h3 {
@@ -19,9 +40,11 @@
 }
 
 .footer-about p {
-  color: var(--gray-300);
-  margin-bottom: 20px;
-  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 25px;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  letter-spacing: 0.3px;
 }
 
 .social-links {
@@ -30,45 +53,75 @@
 }
 
 .social-link {
-  width: 40px;
-  height: 40px;
-  background-color: rgba(255, 255, 255, 0.1);
+  width: 45px;
+  height: 45px;
+  background-color: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  color: var(--white);
-  transition: all var(--transition-fast);
+  color: var(--golden);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .social-link:hover {
-  background-color: var(--saffron);
-  transform: translateY(-3px);
+  background-color: var(--golden);
+  color: var(--maroon);
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3), 0 0 15px rgba(212, 175, 55, 0.4);
 }
 
 .footer-links h4,
 .footer-contact h4 {
   font-family: var(--font-secondary);
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: var(--golden);
-  margin-bottom: 20px;
+  margin-bottom: 25px;
+  position: relative;
+  display: inline-block;
+}
+
+.footer-links h4::after,
+.footer-contact h4::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 40px;
+  height: 2px;
+  background-color: var(--saffron);
 }
 
 .footer-links ul {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 15px;
 }
 
 .footer-links a {
-  color: var(--gray-300);
-  transition: color var(--transition-fast);
-  display: inline-block;
+  color: rgba(255, 255, 255, 0.85);
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.footer-links a::before {
+  content: '›';
+  color: var(--golden);
+  font-size: 1.5rem;
+  margin-right: 8px;
+  line-height: 0;
+  transition: transform 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: var(--saffron);
-  transform: translateX(5px);
+  color: var(--golden);
+  transform: translateX(8px);
+}
+
+.footer-links a:hover::before {
+  transform: translateX(3px);
 }
 
 .footer-contact ul {
@@ -79,22 +132,35 @@
 
 .footer-contact li {
   display: flex;
-  gap: 10px;
-  color: var(--gray-300);
+  gap: 15px;
+  color: rgba(255, 255, 255, 0.85);
   align-items: flex-start;
+  line-height: 1.6;
 }
 
 .footer-contact-icon {
-  color: var(--saffron);
-  margin-top: 5px;
+  color: var(--maroon);
+  background-color: var(--golden);
+  min-width: 36px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  margin-top: 2px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  flex-shrink: 0;
 }
 
 .footer-bottom {
   text-align: center;
   padding-top: 20px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: var(--gray-300);
-  font-size: 0.9rem;
+  border-top: 1px solid rgba(212, 175, 55, 0.2);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.95rem;
+  position: relative;
+  z-index: 1;
 }
 
 /* Scroll To Top */
