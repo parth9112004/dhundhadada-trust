@@ -119,7 +119,7 @@
   position: fixed;
   top: 105px;
   /* Navbar (80px) + top offset (25px) */
-  right: -100%;
+  right: 0;
   left: auto;
   width: 60%;
   /* Half page */
@@ -131,7 +131,8 @@
   display: flex;
   flex-direction: column;
   padding: 20px;
-  transition: right var(--transition-normal);
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
   box-shadow: -4px 0 10px rgba(0, 0, 0, 0.3);
 }
 
@@ -141,8 +142,7 @@
 }
 
 .mobile-nav.open {
-  right: 0;
-  left: auto;
+  transform: translateX(0);
 }
 
 .mobile-nav-link {

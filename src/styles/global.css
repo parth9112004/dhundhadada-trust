@@ -5,6 +5,18 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; /* Removes blue tap highlight on mobile */
+}
+
+/* Remove default blue focus outline for mouse/touch interactions */
+*:focus {
+  outline: none;
+}
+
+/* Add custom golden focus ring for accessible keyboard navigation */
+*:focus-visible {
+  outline: 2px solid var(--golden);
+  outline-offset: 2px;
 }
 
 html {

@@ -108,9 +108,9 @@ const Navbar = () => {
           {navLinks.map((link, index) => (
             <a
               key={index}
-              href={link.href}
+              href={link.path}
               className="mobile-nav-link"
-              onClick={(e) => handleNavClick(e, link.href)}
+              onClick={(e) => handleNavClick(e, link.path)}
             >
               {link.name}
             </a>
