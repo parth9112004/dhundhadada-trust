@@ -12,7 +12,7 @@ const About = () => {
         <div className="about-grid">
           <div className="about-image" data-aos="fade-right">
             <img
-              src="public/temple-history.jpg"
+              src="/temple-history.jpg"
               alt="Temple View"
             />
           </div>
