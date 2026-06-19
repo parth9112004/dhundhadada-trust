@@ -37,17 +37,10 @@ const Navbar = () => {
     <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
       <div className="container nav-container">
         <a href="#home" className="nav-logo" onClick={(e) => handleNavClick(e, '#home')}>
-          <img 
-            src="/temple-logo.png" 
-            alt="જય ધુંધાદાદા - શામળાદાદા" 
+          <img
+            src="/temple-logo.png"
+            alt="જય ધુંધાદાદા - શામળાદાદા"
             className="navbar-brand-logo"
-            style={{ 
-              height: '65px', 
-              width: 'auto', 
-              objectFit: 'contain',
-              mixBlendMode: 'multiply',
-              filter: 'contrast(1.1)'
-            }} 
           />
         </a>
 

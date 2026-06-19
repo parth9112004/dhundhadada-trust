@@ -47,26 +47,18 @@ const Footer = () => {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-about">
-            <div className="footer-logo-badge" style={{
-              display: 'inline-block',
-              backgroundColor: '#fff',
-              padding: '10px 20px',
-              borderRadius: '12px',
-              boxShadow: '0 4px 15px rgba(0,0,0,0.2)',
-              marginBottom: '20px'
-            }}>
-              <img 
-                src="/temple-logo.png" 
-                alt="જય ધુંધાદાદા - શામળાદાદા" 
-                style={{ 
-                  height: '70px', 
-                  width: 'auto', 
-                  objectFit: 'contain',
-                  display: 'block',
-                  mixBlendMode: 'multiply'
-                }} 
-              />
-            </div>
+            <img
+              src="/temple-logo.png"
+              alt="જય ધુંધાદાદા - શામળાદાદા"
+              style={{
+                height: '80px',
+                width: 'auto',
+                objectFit: 'contain',
+                display: 'block',
+                marginBottom: '20px',
+                filter: 'drop-shadow(0 2px 5px rgba(0,0,0,0.2))'
+              }}
+            />
             <p>
               વરલ સ્થિત આ પ્રાચીન અને પવિત્ર મંદિર લાખો ભક્તોની અતૂટ શ્રદ્ધાનું કેન્દ્ર છે.
               અહીંની આધ્યાત્મિક શાંતિ અને ભગવાનની દિવ્યતા જીવનમાં નવી પ્રેરણા અને શાંતિ પ્રદાન કરે છે.

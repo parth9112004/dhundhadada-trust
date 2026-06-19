@@ -1,7 +1,7 @@
 .glass-toggle-container {
   position: fixed;
   bottom: 30px;
-  right: 90px; /* Placed next to the scroll-to-top button */
+  right: 30px; /* Moved to far right as requested */
   z-index: 999;
   display: inline-block;
 }
@@ -90,6 +90,7 @@
 
 @media (max-width: 768px) {
   .glass-toggle-container {
-    right: 85px;
+    right: 20px;
+    bottom: 20px;
   }
 }
